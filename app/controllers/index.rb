@@ -4,7 +4,7 @@ end
 
 post '/service_needed' do
   session[:service_needed] = params[:service_needed]
-  redirect '/user_location'
+  erb :user_location
 end
 
 post '/user_location' do
@@ -12,6 +12,10 @@ post '/user_location' do
   erb :map
 end
 
-get '/map' do
-  erb :map
-end
+
+# get '/user_location' do
+# end
+
+# get '/map' do
+#   erb :map
+# end
