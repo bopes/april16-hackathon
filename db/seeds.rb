@@ -1,6 +1,7 @@
 require 'csv'
 require_relative '../app/models/hospital'
 
+
 Hospital.destroy_all
 
 CSV.foreach('public/Health_Care_Facilities.csv', headers: true) do |facility|
@@ -11,6 +12,7 @@ CSV.foreach('public/Health_Care_Facilities.csv', headers: true) do |facility|
     longitude: facility[5][-41..-2].split(", ").last.to_f )
 end
 
+
 Food.destroy_all
 
 CSV.foreach('public/foods.csv', headers: true) do |facility|
@@ -19,3 +21,11 @@ CSV.foreach('public/foods.csv', headers: true) do |facility|
     address: facility[1] )
 end
 
+
+Shelter.destroy_all
+
+CSV.foreach('public/Shelter.csv', headers: true) do |facility|
+  Shelter.create(
+    name: facility[0],
+    address: facility[1] )
+end
