@@ -3,24 +3,13 @@ get '/' do
 end
 
 post '/service_needed' do
-  @service_needed = params[:service_needed]
+  session[:service_needed] = params[:service_needed]
   redirect '/user_location'
 end
 
 post '/user_location' do
   @user_location = params[:user_location]
-  @service_needed = params[:service_needed]
-  p '*' * 50
-  puts "user_location: #{@user_location}"
-  puts "service_needed: #{@service_needed}"
-  p '*' * 50
-
-  redirect '/map'
-end
-
-get '/user_location' do
-
-  erb :user_location
+  erb :map
 end
 
 get '/map' do
