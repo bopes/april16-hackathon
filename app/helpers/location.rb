@@ -5,3 +5,8 @@ def current_user
     return nil
   end
 end
+
+def save_location(user_location)
+  UserLocation.destroy_all
+  UserLocation.create(location: user_location)
+end

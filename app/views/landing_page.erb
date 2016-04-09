@@ -1,6 +1,11 @@
 <h1>What service do you need?</h1>
-<select>
-  <option value="food">Food</option>
-  <option value="health_care">Health Care</option>
-  <option value="shelter">Shelter</option>
-</select>
+
+<form action='/service_needed' method='POST'>
+  <select name='service_needed'>
+    <option value="food">Food</option>
+    <option value="health_care">Health Care</option>
+    <option value="shelter">Shelter</option>
+  </select>
+  <input type=submit value='Submit'>
+</form>
+
