@@ -8,9 +8,9 @@ post '/service_needed' do
 end
 
 post '/user_location' do
-  @user_location = params[:user_location]
-  @closet_index = Hospital.closest_distance([37.895662090000000, -122.409172330000000], Hospital.find_all_distances)
-  closest_hospital = Hospital.find_by(@closet_index+1)
+  # @user_location = params[:user_location]
+  # @closest_index = Hospital.closest_distance([37.895662090000000, -122.409172330000000], Hospital.find_all_distances)
+  # @closest_hospital = Hospital.find_by(@closest_index)
   erb :map
 end
 
