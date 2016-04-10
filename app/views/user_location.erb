@@ -1,17 +1,10 @@
 <link rel="stylesheet" type="text/css" href="landing.css">
 
-<body>
-
 <div class="box fade-in one">
-	<img src="http://i.imgur.com/tGVPq3P.png">
+  <img src="http://i.imgur.com/tGVPq3P.png">
 </div>
 
-
-</body>
-
-
-<select class="bar fade-in two">
-  <option value="food">Food</option>
-  <option value="health_care">Health Care</option>
-  <option value="shelter">Shelter</option>
-</select>
+<form action='/user_location' method='POST'>
+  <input type='text' name='user_location'>
+  <input type='hidden' name='service_needed' value=<%= @service_needed %>>
+</form>
