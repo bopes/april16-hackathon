@@ -11,11 +11,3 @@ post '/user_location' do
   @user_location = params[:user_location]
   erb :map
 end
-
-
-# get '/user_location' do
-# end
-
-# get '/map' do
-#   erb :map
-# end
