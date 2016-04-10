@@ -41,7 +41,7 @@ left: 27%;
 .bar {
 position: absolute;
 Top: 81%;
-Left: auto;
+Left: 39%;
 Right: auto;
 padding: auto;
 font-size: 30px;
@@ -49,6 +49,54 @@ line-height: 1;
 font-style: Arial;
 }
 
-html {
+.text-bar {
+position: absolute;
+Top: 80.5%;
+Left: 40.5%;
+Right: auto;
+padding: auto;
+}
+
+input[type=text] {
+    font-size: 25px;
+    font-style: Arial;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+    border: 3px solid #555;
+}
+
+.submit-text {
+float: left;
+position: absolute;
+Top: 81%;
+left: 53%;
+}
+
+body {
 	background-color: black;
+}
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+}
+
+input[type=text]:focus {
+
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    font-size: 25px;
 }
