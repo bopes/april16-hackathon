@@ -1,3 +1,5 @@
+
+
 # write a method that takes two coordinate pairs as arguments,
 # and returns the distance between the two points
 def calculate_distance(a, b)
@@ -16,7 +18,9 @@ def closest_distance(start, array)
   closest_place_index
 end
 
-a = [0,0]
-array = [ [5,5], [10,10], [3,3], [1,1] ]
 
-p closest_distance(a, array)
+
+def find_all_distances
+  # Hospital.all
+end
+p find_all_distances

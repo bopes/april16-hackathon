@@ -9,5 +9,13 @@ end
 
 post '/user_location' do
   @user_location = params[:user_location]
+  @closet_index = Hospital.closest_distance([37.895662090000000, -122.409172330000000], Hospital.find_all_distances)
+  closest_hospital = Hospital.find_by(@closet_index+1)
   erb :map
 end
+
+get '/test' do
+  p Hospital.closest_distance([37.895662090000000, -122.409172330000000], Hospital.find_all_distances)
+end
+
+
