@@ -1,10 +1,24 @@
-<link rel="stylesheet" type="text/css" href="landing.css">
+<head>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/application.css">
+  <title></title>
+</head>
+<body>
+<div id="content">
+  <header>
 
-<div class="box fade-in one">
-  <img src="http://i.imgur.com/tGVPq3P.png">
+  </header>
+  <link rel="stylesheet" type="text/css" href="landing.css">
+
+  <div class="box fade-in one">
+    <img src="http://i.imgur.com/tGVPq3P.png">
+  </div>
+
+  <form action='/user_location' method='POST'>
+    <input type='text' name='user_location'>
+    <input type='hidden' name='service_needed' value=<%= @service_needed %>>
+  </form>
 </div>
+</body>
 
-<form action='/user_location' method='POST'>
-  <input type='text' name='user_location'>
-  <input type='hidden' name='service_needed' value=<%= @service_needed %>>
-</form>
+
